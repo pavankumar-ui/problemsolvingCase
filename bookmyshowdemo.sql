@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 27, 2024 at 05:29 AM
+-- Generation Time: Jan 03, 2025 at 12:16 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -182,6 +182,7 @@ CREATE TABLE IF NOT EXISTS `theatre` (
   `Name` varchar(200) NOT NULL,
   `Location` varchar(50) NOT NULL,
   `City` varchar(50) NOT NULL,
+  `NoOfScreens` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -189,17 +190,17 @@ CREATE TABLE IF NOT EXISTS `theatre` (
 -- Dumping data for table `theatre`
 --
 
-INSERT INTO `theatre` (`id`, `Name`, `Location`, `City`) VALUES
-(1, 'Cinepolis Meenakshi Mall', 'Hulimav', 'Bangalore'),
-(2, 'Siddeshwara', 'JP Nagara', 'Bangalore'),
-(3, 'PVR Nexux Mall', 'Kormangala', 'Bangalore'),
-(4, 'Lido Mall', 'Mandi Mohalla', 'Mysore'),
-(5, 'Sangam', 'Lashkara Mohalla', 'Mysore'),
-(6, 'PVR Cinemas sangam', 'Andheri road', 'Mumbai'),
-(7, 'Cinepolis Neptune Mall', 'Ganesh Nagar', 'Mumbai'),
-(8, 'Narthaki', 'Majestic', 'Bangalore'),
-(9, 'Gopalan Cinemas', 'Bannerghatta road', 'Bangalore'),
-(10, 'PVR Forum Mall', 'Kanakpura Road', 'Bangalore');
+INSERT INTO `theatre` (`id`, `Name`, `Location`, `City`, `NoOfScreens`) VALUES
+(1, 'Cinepolis Meenakshi Mall', 'Hulimav', 'Bangalore', 5),
+(2, 'Siddeshwara', 'JP Nagara', 'Bangalore', 1),
+(3, 'PVR Nexux Mall', 'Kormangala', 'Bangalore', 5),
+(4, 'Lido Mall', 'Mandi Mohalla', 'Mysore', 4),
+(5, 'Sangam', 'Lashkara Mohalla', 'Mysore', 1),
+(6, 'PVR Cinemas sangam', 'Andheri road', 'Mumbai', 1),
+(7, 'Cinepolis Neptune Mall', 'Ganesh Nagar', 'Mumbai', 1),
+(8, 'Narthaki', 'Majestic', 'Bangalore', 1),
+(9, 'Gopalan Cinemas', 'Bannerghatta road', 'Bangalore', 4),
+(10, 'PVR Forum Mall', 'Kanakpura Road', 'Bangalore', 6);
 
 -- --------------------------------------------------------
 
